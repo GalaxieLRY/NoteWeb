@@ -9,25 +9,28 @@ export default defineConfig({
 	integrations: [
 		starlight({
 			title: '首页',
-			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
+			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/GalaxieLRY/NoteWeb' }],
+            locales: {
+				root: {
+					label: '简体中文',
+					lang: 'zh'
+				}
+      		},
 			sidebar: [
                 {
+					label: 'LLM',
+                    autogenerate: { directory:'LLM' },
+					// items: [
+					// 	// Each item here is one entry in the navigation menu.
+					// 	{ label: 'prompt', slug: 'llm/prompt' },
+					// ],
+				},
+                {
 					label: '网络安全',
-                    autogenerate: { directory:'reference' },
+                    autogenerate: { directory:'networkSecurity' },
 					// items: [
 					// 	{ label: '第1章 引言', slug: 'networkSecurity/第1章 引言' },
 					// ],
-				},
-				{
-					label: '指南',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: '示例指南', slug: 'guides/example' },
-					],
-				},
-				{
-					label: '参考',
-					autogenerate: { directory:'reference' },
 				},
 			],
 		}),
