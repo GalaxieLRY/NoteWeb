@@ -8,19 +8,26 @@ export default defineConfig({
     base: 'NoteWeb',
 	integrations: [
 		starlight({
-			title: 'My Docs',
+			title: '首页',
 			social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/withastro/starlight' }],
 			sidebar: [
+                {
+					label: '网络安全',
+                    autogenerate: { directory:'reference' },
+					// items: [
+					// 	{ label: '第1章 引言', slug: 'networkSecurity/第1章 引言' },
+					// ],
+				},
 				{
-					label: 'Guides',
+					label: '指南',
 					items: [
 						// Each item here is one entry in the navigation menu.
-						{ label: 'Example Guide', slug: 'guides/example' },
+						{ label: '示例指南', slug: 'guides/example' },
 					],
 				},
 				{
-					label: 'Reference',
-					autogenerate: { directory: 'reference' },
+					label: '参考',
+					autogenerate: { directory:'reference' },
 				},
 			],
 		}),
