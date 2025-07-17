@@ -17,13 +17,7 @@ export default defineConfig({
 				}
       		},
 			sidebar: [
-                {
-					label: 'intro',
-					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: '简介', slug: '.intro/intro' },
-					],
-				},
+				{ label: '简介', link: '/intro/' },
                 {
 					label: 'LLM',
                     autogenerate: { directory:'LLM' },
