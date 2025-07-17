@@ -41,6 +41,10 @@ export default defineConfig({
 					// 	{ label: '第1章 引言', slug: 'networkSecurity/第1章 引言' },
 					// ],
 				},
+                {
+					label: '刷题题解',
+                    autogenerate: { directory:'keyToExercises' },
+				},
 			],
 		}),
 	],
