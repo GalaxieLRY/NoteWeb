@@ -19,6 +19,14 @@ export default defineConfig({
 			sidebar: [
 				{ label: '简介', link: '/intro/' },
                 {
+					label: 'Astro样式指南',
+                    autogenerate: { directory:'astro' },
+					// items: [
+					// 	// Each item here is one entry in the navigation menu.
+					// 	{ label: 'prompt', slug: 'llm/prompt' },
+					// ],
+				},
+                {
 					label: 'LLM',
                     autogenerate: { directory:'LLM' },
 					// items: [
