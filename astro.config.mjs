@@ -39,8 +39,12 @@ export default defineConfig({
                     autogenerate: { directory:'keyToAlgoExercises' },
 				},
                 {
-					label: '前端',
+					label: '前端开发',
                     autogenerate: { directory:'front' },
+				},
+                {
+					label: '杂项',
+                    autogenerate: { directory:'misc' },
 				},
 			],
 		}),
