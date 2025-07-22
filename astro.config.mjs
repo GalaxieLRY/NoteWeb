@@ -35,15 +35,12 @@ export default defineConfig({
 					// ],
 				},
                 {
-					label: '网络安全',
-                    autogenerate: { directory:'networkSecurity' },
-					// items: [
-					// 	{ label: '第1章 引言', slug: 'networkSecurity/第1章 引言' },
-					// ],
+					label: '刷题题解',
+                    autogenerate: { directory:'keyToAlgoExercises' },
 				},
                 {
-					label: '刷题题解',
-                    autogenerate: { directory:'keyToExercises' },
+					label: '前端',
+                    autogenerate: { directory:'front' },
 				},
 			],
 		}),
