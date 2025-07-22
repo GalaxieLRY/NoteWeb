@@ -50,3 +50,6 @@ docker run -it -p 10025:22 --name 容器名称 基础镜像名称 /bin/bash
 3. --name 容器名称：指定容器名称
 4. 基础镜像名称：指定容器的基础镜像
 5. /bin/bash：启动bash shell
+
+详细介绍：
+[从零开始通过宿主机中的docker容器进行开发（使用Vscode连接）](https://zhuanlan.zhihu.com/p/1905702741533238172)
