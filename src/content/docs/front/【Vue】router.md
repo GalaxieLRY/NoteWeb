@@ -1,5 +1,5 @@
 ---
-title: router
+title: 【Vue】router
 date: 2025-07-22
 draft: false
 ---
