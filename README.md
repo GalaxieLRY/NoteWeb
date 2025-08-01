@@ -1,3 +1,11 @@
+# 介绍
+
+这是本人的个人笔记网站仓库
+
+个人网站可以查看：[https://galaxielry.github.io/NoteWeb/](https://galaxielry.github.io/NoteWeb/)
+
+如果你也想创建自己的笔记网站，可以使用Starlight模板。
+
 # Starlight Starter Kit: Basics
 
 [![Built with Starlight](https://astro.badg.es/v2/built-with-starlight/tiny.svg)](https://starlight.astro.build)
