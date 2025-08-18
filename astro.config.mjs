@@ -2,6 +2,9 @@
 import { defineConfig } from 'astro/config';
 import starlight from '@astrojs/starlight';
 
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
+
 // https://astro.build/config
 export default defineConfig({
     site: 'https://GalaxieLRY.github.io',
@@ -10,6 +13,7 @@ export default defineConfig({
         starlight({
             title: '首页',
             social: [{ icon: 'github', label: 'GitHub', href: 'https://github.com/GalaxieLRY/NoteWeb' }],
+            customCss: ['./src/styles/katex.css'],
             locales: {
                 root: {
                     label: '简体中文',
@@ -63,4 +67,14 @@ export default defineConfig({
             ],
         }),
     ],
+    markdown: {
+        syntaxHighlight: 'shiki',
+        shikiConfig: {
+            theme: 'css-variables',
+        },
+        rehypePlugins: [rehypeKatex],
+        remarkPlugins: [
+            remarkMath
+        ]
+    },
 });

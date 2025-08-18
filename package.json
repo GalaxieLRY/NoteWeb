@@ -1,17 +1,20 @@
 {
-  "name": "noteweb",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "start": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
-  },
-  "dependencies": {
-    "@astrojs/starlight": "^0.34.7",
-    "astro": "^5.6.1",
-    "sharp": "^0.34.2"
-  }
+    "name": "noteweb",
+    "type": "module",
+    "version": "0.0.1",
+    "scripts": {
+        "dev": "astro dev",
+        "start": "astro dev",
+        "build": "astro build",
+        "preview": "astro preview",
+        "astro": "astro"
+    },
+    "dependencies": {
+        "@astrojs/starlight": "^0.34.7",
+        "astro": "^5.6.1",
+        "katex": "^0.16.22",
+        "rehype-katex": "^7.0.1",
+        "remark-math": "^6.0.0",
+        "sharp": "^0.34.2"
+    }
 }
