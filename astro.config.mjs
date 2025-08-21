@@ -31,6 +31,10 @@ export default defineConfig({
                     // ],
                 },
                 {
+                    label: '密码学',
+                    autogenerate: { directory: 'cryptography' },
+                },
+                {
                     label: '前端开发',
                     autogenerate: { directory: 'front' },
                 },
