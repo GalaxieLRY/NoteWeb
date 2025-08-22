@@ -79,24 +79,27 @@ public:
     初始化处理
         prefixCount[0] = 1 是为了处理 “子数组从索引 0 开始” 的情况（此时 prefixSum[i] = k 直接满足条件）。
     */
-    unordered_map<int, int> prefixCount; // 记录前缀和出现的次数
-    prefixCount[0] = 1; // 初始化：前缀和为0的情况出现1次（用于匹配从起点开始的子数组）
-    
-    int prefixSum = 0; // 当前前缀和（前i个元素的和）
-    int result = 0;
-    
-    for (int num : nums) {
-        prefixSum += num; // 更新前缀和
+
+    int subarraySum(vector<int>& nums, int k) {
+        unordered_map<int, int> prefixCount; // 记录前缀和出现的次数
+        prefixCount[0] = 1; // 初始化：前缀和为0的情况出现1次（用于匹配从起点开始的子数组）
         
-        // 若存在前缀和为 (prefixSum - k)，说明中间子数组的和为k
-        if (prefixCount.find(prefixSum - k) != prefixCount.end()) {
-            result += prefixCount[prefixSum - k];
+        int prefixSum = 0; // 当前前缀和（前i个元素的和）
+        int result = 0;
+        
+        for (int num : nums) {
+            prefixSum += num; // 更新前缀和
+            
+            // 若存在前缀和为 (prefixSum - k)，说明中间子数组的和为k
+            if (prefixCount.find(prefixSum - k) != prefixCount.end()) {
+                result += prefixCount[prefixSum - k];
+            }
+            
+            // 记录当前前缀和出现的次数
+            prefixCount[prefixSum]++;
         }
         
-        // 记录当前前缀和出现的次数
-        prefixCount[prefixSum]++;
+        return result;
     }
-    
-    return result;
 };
 ```
